@@ -1,0 +1,28 @@
+<head>
+	<title>Hanyuchat</title>
+</head>
+
+<body>
+	<h3>Hanyu Chat 我们写吧， 加油！</h3>
+	<div class="row-fluid">
+		<div class="span12 well">
+			{{>messages}}
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12 well">
+			{{>input}}
+		</div>
+	</div>
+</body>
+
+<template name="input">
+    <input type="text" id="msg" placeholder="Type here..." class="chatinput">
+		<input type="button" value="Send" class="btn btn-success btn-sm sendMsg">
+</template>
+
+<template name="messages">
+		{{#each messages}}
+			<p><strong>User says:</strong> {{msgText}}</p>
+		{{/each}}
+</template>
