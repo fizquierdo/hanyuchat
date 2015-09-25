@@ -23,6 +23,10 @@
 
 <template name="messages">
 		{{#each messages}}
-			<p><strong>User says:</strong> {{msgText}}</p>
+			{{>message}}
 		{{/each}}
+</template>
+
+<template name="message">
+		<p>[{{formatted_timestamp}}] <strong>User says:</strong> {{msgText}}</p>
 </template>

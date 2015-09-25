@@ -24,3 +24,9 @@ Template.messages.helpers({
 	}
 });
 
+Template.message.helpers({
+	formatted_timestamp: function(){
+		return moment(this.timestamp).format("MM-DD-YYYY HH:mm");
+	}
+});
+
