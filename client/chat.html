@@ -2,7 +2,16 @@
 	<title>Hanyuchat</title>
 </head>
 
+
 <body>
+	<div class="navbar" role="navigation">
+		<div class="navbar-header">
+			<ul class="nav">
+				{{> loginButtons}}
+			</ul>
+		</div>
+	</div>
+
 	<h3>Hanyu Chat 我们写吧， 加油！</h3>
 	<div class="row-fluid">
 		<div class="span12 well">
@@ -28,5 +37,5 @@
 </template>
 
 <template name="message">
-		<p>[{{formatted_timestamp}}] <strong>User says:</strong> {{msgText}}</p>
+<p>[{{formatted_timestamp}}] <strong>{{user}} says:</strong> {{msgText}}</p>
 </template>

@@ -1,8 +1,13 @@
 Meteor.subscribe("messages");
 
+Accounts.ui.config({
+	passwordSignupFields: 'USERNAME_ONLY'
+});
+
 _sendMessage = function(){
 	var msg = document.getElementById("msg");
-	Messages.insert({msgText: msg.value, timestamp: new Date()});
+	user = Meteor.user() ? Meteor.user().username : "Anonymous";
+	Messages.insert({user: user, msgText: msg.value, timestamp: new Date()});
 	msg.value = "";
 	msg.focus();
 };
