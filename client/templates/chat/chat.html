@@ -1,22 +1,16 @@
-<head>
-	<title>Hanyuchat</title>
-</head>
-
-<body>
-	{{> header}}
-
-	<h3>Hanyu Chat 我们写吧， 加油！</h3>
-	<div class="row-fluid">
-		<div class="span12 well">
-			{{>messages}}
-		</div>
+<template name="chat">
+<h3>Hanyu Chat 我们写吧， 加油！</h3>
+<div class="row-fluid">
+	<div class="span12 well">
+		{{>messages}}
 	</div>
-	<div class="row-fluid">
-		<div class="span12 well">
-			{{>input}}
-		</div>
+</div>
+<div class="row-fluid">
+	<div class="span12 well">
+		{{>input}}
 	</div>
-</body>
+</div>
+</template>
 
 <template name="input">
     <input type="text" id="msg" placeholder="Type here..." class="chatinput">
