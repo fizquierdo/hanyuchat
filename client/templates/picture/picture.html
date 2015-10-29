@@ -1,5 +1,26 @@
 <template name="picture">
 <h3>
-	Describe the picture
+	Describe the Picture
 </h3>
+
+<div class="row-fluid">
+	<div class="col-xs-6">
+		<!-- this should be a pic from the DB -->
+		<img src="children-are-running.jpg">
+	</div>
+	<div class="col-xs-6">
+
+		<div class="input-group has-success has-feedback">
+			<textarea class="form-control custom-control" rows="6">Type the description</textarea>     
+			<span class="input-group-addon btn btn-primary">Send</span>
+		</div>
+
+		<br/>
+
+		<div class="input-group has-warning has-feedback">
+			<textarea class="form-control custom-control" rows="6">Type the correction</textarea>     
+			<span class="input-group-addon btn btn-primary">Send</span>
+		</div>
+	</div>
+</div>
 </template>
