@@ -9,18 +9,34 @@
 		<img src="children-are-running.jpg">
 	</div>
 	<div class="col-xs-6">
-
-		<div class="input-group has-success has-feedback">
-			<textarea class="form-control custom-control" rows="6">Type the description</textarea>     
-			<span class="input-group-addon btn btn-primary">Send</span>
-		</div>
-
+		{{> descriptions}}
 		<br/>
 
+		<div class="input-group has-success has-feedback">
+			<textarea class="form-control custom-control" rows="6" id="picDesc">Type the description</textarea>     
+			<span class="input-group-addon btn btn-primary sendDesc">Send</span>
+		</div>
+
+		<!--
 		<div class="input-group has-warning has-feedback">
 			<textarea class="form-control custom-control" rows="6">Type the correction</textarea>     
 			<span class="input-group-addon btn btn-primary">Send</span>
 		</div>
+		-->
+
 	</div>
 </div>
+</template>
+
+<template name="descriptions">
+	{{#each descriptions}}
+		{{> description}}
+	{{/each}}
+</template>
+
+<template name="description">
+		<div class="well well-sm well-desc">
+			<p class="small text-muted">[{{formatted_timestamp}}] {{user}}:</p>
+			<p>{{picDescText}}</p>
+		</div>
 </template>
